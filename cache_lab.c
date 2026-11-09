@@ -54,16 +54,16 @@ void free_matrix() {
  * Visits every element in row 0, then row 1, then row 2, etc.
  * Returns the sum of all elements.
  * 
- * TODO: Implement this function.
  * Hint: The outer loop should iterate over rows, the inner loop over columns.
  */
 long long traverse_row_major() {
     long long sum = 0;
     
-    // ============================================
-    // TODO: Implement row-major traversal
-    // Visit elements in order: [0][0], [0][1], [0][2], ... [1][0], [1][1], ...
-    // ============================================
+    for (int i = 0; i < current_size; i++) {
+        for (int j = 0; j < current_size; j++) {
+            sum += matrix[i][j];
+        }
+    }
     
     return sum;
 }
@@ -73,16 +73,16 @@ long long traverse_row_major() {
  * Visits every element in column 0, then column 1, then column 2, etc.
  * Returns the sum of all elements.
  * 
- * TODO: Implement this function.
  * Hint: The outer loop should iterate over columns, the inner loop over rows.
  */
 long long traverse_column_major() {
     long long sum = 0;
     
-    // ============================================
-    // TODO: Implement column-major traversal
-    // Visit elements in order: [0][0], [1][0], [2][0], ... [0][1], [1][1], ...
-    // ============================================
+    for (int j = 0; j < current_size; j++) {
+        for (int i = 0; i < current_size; i++) {
+            sum += matrix[i][j];
+        }
+    }
     
     return sum;
 }
